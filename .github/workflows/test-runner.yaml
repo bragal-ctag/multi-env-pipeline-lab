@@ -5,35 +5,35 @@ on:
 
 jobs:
   test:
-  name: Test Runner & Cluster Access
-  runs-on: self-hosted
-  steps:
-    - name: Checkout code
-    uses: actions/checkout@v4
-    
-    - name: Check runner environment
-    run: |
-      echo "Ì∂•Ô∏è Informaci√≥n del runner:"
-      echo "Hostname: $(hostname)"
-      echo "OS: $(uname -s)"
-      echo "Directorio de trabajo: $(pwd)"
-    
-    - name: Verify kubectl access
-    run: |
-      echo "Ì¥ç Verificando acceso a Kubernetes..."
-      kubectl version --client
-      kubectl config current-context
-    
-    - name: List Kubernetes namespaces
-    run: |
-      echo "Ì≥¶ Namespaces de Kubernetes:"
-      kubectl get namespaces
-    
-    - name: Check our environments
-    run: |
-      echo "‚úÖ Comprobando los entornos del laboratorio:"
-      kubectl get namespace dev staging prod
-    
-    - name: Success!
-    run: |
-      echo "Ìæâ ¬°El runner funciona y tiene acceso al cl√∫ster!"
+    name: Test Runner & Cluster Access
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Check runner environment
+        run: |
+          echo "ÔøΩÔøΩÔøΩÔ∏è Informaci√≥n del runner:"
+          echo "Hostname: $(hostname)"
+          echo "OS: $(uname -s)"
+          echo "Directorio de trabajo: $(pwd)"
+        
+      - name: Verify kubectl access
+        run: |
+          echo "ÔøΩÔøΩÔøΩ Verificando acceso a Kubernetes..."
+          kubectl version --client
+          kubectl config current-context
+        
+      - name: List Kubernetes namespaces
+        run: |
+          echo "ÔøΩÔøΩÔøΩ Namespaces de Kubernetes:"
+          kubectl get namespaces
+        
+      - name: Check our environments
+        run: |
+          echo "‚úÖ Comprobando los entornos del laboratorio:"
+          kubectl get namespace dev staging prod
+        
+      - name: Success!
+        run: |
+          echo "ÔøΩÔøΩÔøΩ ¬°El runner funciona y tiene acceso al cl√∫ster!"

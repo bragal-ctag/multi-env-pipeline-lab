@@ -13,27 +13,27 @@ jobs:
       
       - name: Check runner environment
         run: |
-          echo "���️ Información del runner:"
+          echo "🖥️ Información del runner:"
           echo "Hostname: $(hostname)"
           echo "OS: $(uname -s)"
           echo "Directorio de trabajo: $(pwd)"
-        
+      
       - name: Verify kubectl access
         run: |
-          echo "��� Verificando acceso a Kubernetes..."
+          echo "🔍 Verificando acceso a Kubernetes..."
           kubectl version --client
           kubectl config current-context
         
       - name: List Kubernetes namespaces
         run: |
-          echo "��� Namespaces de Kubernetes:"
+          echo "📦 Namespaces de Kubernetes:"
           kubectl get namespaces
-        
+      
       - name: Check our environments
         run: |
           echo "✅ Comprobando los entornos del laboratorio:"
           kubectl get namespace dev staging prod
-        
+      
       - name: Success!
         run: |
-          echo "��� ¡El runner funciona y tiene acceso al clúster!"
+          echo "🎉 ¡El runner funciona y tiene acceso al clúster!"

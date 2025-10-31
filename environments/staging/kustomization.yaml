@@ -9,7 +9,7 @@ commonLabels:
   environment: staging
   team: platform
 
-bases:
+resources:
   - ../../apps/webapp
 
 configMapGenerator:

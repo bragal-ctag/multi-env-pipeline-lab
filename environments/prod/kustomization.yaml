@@ -9,7 +9,7 @@ commonLabels:
   environment: production
   team: platform
 
-bases:
+resources:
   - ../../apps/webapp
 
 configMapGenerator:

@@ -21,18 +21,18 @@ jobs:
       - name: Verify kubectl access
         run: |
           echo "🔍 Verificando acceso a Kubernetes..."
-          kubectl version --client
-          kubectl config current-context
+          /mnt/c/Program\ Files/Docker/Docker/resources/bin/kubectl.exe version --client
+          /mnt/c/Program\ Files/Docker/Docker/resources/bin/kubectl.exe config current-context
         
       - name: List Kubernetes namespaces
         run: |
           echo "📦 Namespaces de Kubernetes:"
-          kubectl get namespaces
+          /mnt/c/Program\ Files/Docker/Docker/resources/bin/kubectl.exe get namespaces
       
       - name: Check our environments
         run: |
           echo "✅ Comprobando los entornos del laboratorio:"
-          kubectl get namespace dev staging prod
+          /mnt/c/Program\ Files/Docker/Docker/resources/bin/kubectl.exe get namespace dev staging prod
       
       - name: Success!
         run: |

@@ -3,13 +3,13 @@ kind: Service
 metadata:
   name: webapp-service
   labels:
-  app: webapp
+    app: webapp
 spec:
   type: ClusterIP
   selector:
-  app: webapp
+    app: webapp
   ports:
-  - port: 80
-  targetPort: http
-  protocol: TCP
-  name: http
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP

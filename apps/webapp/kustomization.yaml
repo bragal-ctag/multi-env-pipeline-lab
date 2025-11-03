@@ -8,6 +8,5 @@ resources:
 
 commonLabels:
   app: webapp
-  version: v1.0.0
 
 namespace: default

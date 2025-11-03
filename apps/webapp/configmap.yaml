@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: webapp-config
   labels:
-  app: webapp
+    app: webapp
 data:
   ENVIRONMENT: "base"
   VERSION: "1.0.0"
